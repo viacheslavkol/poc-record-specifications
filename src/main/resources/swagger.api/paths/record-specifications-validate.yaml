@@ -9,7 +9,7 @@ post:
         example:
           $ref: '../examples/marcRecord.yaml'
         schema:
-          $ref: '../record-specifications-server.yaml#/components/schemas/marcRecord'
+          $ref: '../poc-record-specifications.yaml#/components/schemas/marcRecord'
   responses:
     '204':
       description: 'Record valid'

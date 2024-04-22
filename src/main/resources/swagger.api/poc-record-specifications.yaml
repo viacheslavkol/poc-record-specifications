@@ -13,9 +13,9 @@ paths:
 components:
   schemas:
     recordSpecification:
-      type: RecordSpecification
+      $ref: 'entity/recordSpecification.yaml'
     marcRecord:
-      type: MarcRecord
+      $ref: 'entity/marcRecord.yaml'
 
   responses:
     unprocessableEntityResponse:
@@ -28,4 +28,4 @@ components:
       description: 'Indicates type of record'
       required: true
       schema:
-        type: RecordType
+        $ref: 'entity/recordType.yaml'

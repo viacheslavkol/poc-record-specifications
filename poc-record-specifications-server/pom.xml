@@ -15,7 +15,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <record-specifications-server.yaml.file>${project.basedir}/src/main/resources/swagger.api/record-specifications-server.yaml</record-specifications-server.yaml.file>
+        <poc-record-specifications.yaml.file>${project.parent.basedir}/src/main/resources/swagger.api/poc-record-specifications.yaml</poc-record-specifications.yaml.file>
 
         <lombok.version>1.18.32</lombok.version>
         <spring.version>3.2.4</spring.version>
@@ -85,7 +85,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${record-specifications-server.yaml.file}</inputSpec>
+                            <inputSpec>${poc-record-specifications.yaml.file}</inputSpec>
                             <output>${project.build.directory}/generated-sources</output>
                             <generatorName>spring</generatorName>
                             <modelPackage>${project.groupId}.poc.specifications.dto</modelPackage>
@@ -93,7 +93,7 @@
                             <generateApis>true</generateApis>
                             <generateApiTests>true</generateApiTests>
                             <generateApiDocumentation>true</generateApiDocumentation>
-                            <generateModels>true</generateModels>
+                            <generateModels>false</generateModels>
                             <generateModelTests>false</generateModelTests>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
@@ -113,7 +113,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${record-specifications-server.yaml.file}</inputSpec>
+                            <inputSpec>${poc-record-specifications.yaml.file}</inputSpec>
                             <output>${project.build.directory}/docs/poc-record-specifications</output>
                             <generatorName>html2</generatorName>
                         </configuration>

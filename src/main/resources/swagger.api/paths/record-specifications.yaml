@@ -4,7 +4,7 @@ get:
   tags:
     - record-specifications
   parameters:
-    - $ref: '../record-specifications-server.yaml#/components/parameters/recordTypeParam'
+    - $ref: '../poc-record-specifications.yaml#/components/parameters/recordTypeParam'
 #    - $ref: '../recordTypeParam'
   responses:
     '200':
@@ -14,7 +14,7 @@ get:
           example:
             $ref: '../examples/recordSpecification.yaml'
           schema:
-            $ref: '../record-specifications-server.yaml#/components/schemas/recordSpecification'
+            $ref: '../poc-record-specifications.yaml#/components/schemas/recordSpecification'
     '422':
       $ref: '../responses/unprocessableEntityResponse.yaml'
 
@@ -29,7 +29,7 @@ post:
         example:
           $ref: '../examples/recordSpecification.yaml'
         schema:
-          $ref: '../record-specifications-server.yaml#/components/schemas/recordSpecification'
+          $ref: '../poc-record-specifications.yaml#/components/schemas/recordSpecification'
   responses:
     '204':
       description: 'Specification created'

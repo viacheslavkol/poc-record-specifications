@@ -15,7 +15,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <record-specifications-dto.yaml.file>${project.basedir}/src/main/resources/swagger.api/record-specifications-dto.yaml</record-specifications-dto.yaml.file>
+        <poc-record-specifications.yaml.file>${project.parent.basedir}/src/main/resources/swagger.api/poc-record-specifications.yaml</poc-record-specifications.yaml.file>
     </properties>
 
     <dependencies>
@@ -65,7 +65,7 @@
                         </goals>
                         <configuration>
                             <skipValidateSpec>true</skipValidateSpec>
-                            <inputSpec>${record-specifications-dto.yaml.file}</inputSpec>
+                            <inputSpec>${poc-record-specifications.yaml.file}</inputSpec>
                             <output>${project.build.directory}/generated-sources</output>
                             <generatorName>spring</generatorName>
                             <modelPackage>${project.groupId}.poc.specifications.dto</modelPackage>
@@ -85,7 +85,7 @@
                         </goals>
                         <configuration>
                             <skipValidateSpec>true</skipValidateSpec>
-                            <inputSpec>${record-specifications-dto.yaml.file}</inputSpec>
+                            <inputSpec>${poc-record-specifications.yaml.file}</inputSpec>
                             <output>${project.build.directory}/docs/mod-record-specifications</output>
                             <generatorName>html2</generatorName>
                         </configuration>
