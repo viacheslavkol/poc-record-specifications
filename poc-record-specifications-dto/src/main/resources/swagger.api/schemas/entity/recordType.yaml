@@ -1,0 +1,5 @@
+type: string
+description: Record type
+enum:
+  - MARC
+  - NON_MARC

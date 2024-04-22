@@ -1,0 +1,15 @@
+description: "Record specification"
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: "Record UUID"
+  type:
+    description: "Record type"
+    $ref: 'recordType.yaml'
+  fieldRules:
+    type: array
+    description: "Record field rules"
+    items:
+      $ref: 'fieldRule.yaml'

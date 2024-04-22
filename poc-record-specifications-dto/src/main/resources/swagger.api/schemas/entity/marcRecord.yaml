@@ -1,0 +1,10 @@
+description: "Marc record"
+type: object
+properties:
+  type:
+    $ref: 'recordType.yaml'
+  fields:
+    type: array
+    description: "Record fields"
+    items:
+      $ref: 'marcField.yaml'

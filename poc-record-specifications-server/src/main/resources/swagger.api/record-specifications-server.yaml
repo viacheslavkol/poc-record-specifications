@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: Record Specifications dtos
+  version: v1.0.0
+  description: Record Specifications dtos
+
+paths:
+  /record-specifications:
+    $ref: 'paths/record-specifications.yaml'
+  /record-specifications/validate:
+    $ref: 'paths/record-specifications-validate.yaml'
+
+components:
+  schemas:
+    recordSpecification:
+      type: RecordSpecification
+    marcRecord:
+      type: MarcRecord
+
+  responses:
+    unprocessableEntityResponse:
+      $ref: 'responses/unprocessableEntityResponse.yaml'
+
+  parameters:
+    recordTypeParam:
+      in: query
+      name: recordType
+      description: 'Indicates type of record'
+      required: true
+      schema:
+        type: RecordType

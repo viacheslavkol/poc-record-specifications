@@ -1,0 +1,12 @@
+id: "2349b0e5-605b-4afd-ab2b-2625c6da11ad"
+type: "MARC"
+fieldRules: [
+  {
+    tag: "100",
+    requiredSubfields: ["a", "b"]
+  },
+  {
+    tag: "200",
+    requiredSubfields: [ "c", "d" ]
+  }
+]

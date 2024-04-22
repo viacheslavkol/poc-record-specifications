@@ -1,0 +1,6 @@
+description: "An error"
+type: "object"
+properties:
+  message:
+    type: "string"
+    description: "Error message text"

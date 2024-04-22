@@ -1,0 +1,12 @@
+description: "A set of errors"
+type: "object"
+properties:
+  errors:
+    description: "List of errors"
+    id: "errors"
+    type: "array"
+    items:
+      type: "string"
+  total_records:
+    description: "Total number of errors"
+    type: "integer"

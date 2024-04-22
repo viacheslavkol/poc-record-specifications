@@ -1,0 +1,13 @@
+type: object
+description: "Field rule"
+properties:
+  tag:
+    type: string
+    description: "field tag"
+  requiredSubfields:
+    type: array
+    description: "Field subfields"
+    items:
+      type: string
+      minLength: 1
+      maxLength: 1

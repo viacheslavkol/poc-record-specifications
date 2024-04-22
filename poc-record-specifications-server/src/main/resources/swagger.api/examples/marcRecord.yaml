@@ -1,0 +1,11 @@
+type: "MARC"
+fields: [
+  {
+    tag: "100",
+    subfields: ["a", "b"]
+  },
+  {
+    tag: "200",
+    subfields: [ "c", "d" ]
+  }
+]

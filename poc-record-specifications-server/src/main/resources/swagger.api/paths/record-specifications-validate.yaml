@@ -1,0 +1,18 @@
+post:
+  operationId: recordValidation
+  description: validate record
+  tags:
+    - record-validation
+  requestBody:
+    content:
+      application/json:
+        example:
+          $ref: '../examples/marcRecord.yaml'
+        schema:
+          $ref: '../record-specifications-server.yaml#/components/schemas/marcRecord'
+  responses:
+    '204':
+      description: 'Record valid'
+    '422':
+      description: 'Record invalid'
+      $ref: '../responses/unprocessableEntityResponse.yaml'

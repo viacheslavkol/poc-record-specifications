@@ -1,0 +1,12 @@
+openapi: 3.0.0
+info:
+  title: Record Specifications dtos
+  version: v1.0.0
+  description: Record Specifications dtos
+
+components:
+  schemas:
+    recordSpecification:
+      $ref: 'schemas/entity/recordSpecification.yaml'
+    marcRecord:
+      $ref: 'schemas/entity/marcRecord.yaml'

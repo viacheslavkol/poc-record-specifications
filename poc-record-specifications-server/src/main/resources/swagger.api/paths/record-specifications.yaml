@@ -1,0 +1,35 @@
+get:
+  operationId: getRecordSpecifications
+  description: Get a record specification for record type
+  tags:
+    - record-specifications
+  parameters:
+    - $ref: '../record-specifications-server.yaml#/components/parameters/recordTypeParam'
+#    - $ref: '../recordTypeParam'
+  responses:
+    '200':
+      description: 'Record specification'
+      content:
+        application/json:
+          example:
+            $ref: '../examples/recordSpecification.yaml'
+          schema:
+            $ref: '../record-specifications-server.yaml#/components/schemas/recordSpecification'
+    '422':
+      $ref: '../responses/unprocessableEntityResponse.yaml'
+
+post:
+  operationId: postRecordSpecifications
+  description: post a record specification
+  tags:
+    - record-specifications
+  requestBody:
+    content:
+      application/json:
+        example:
+          $ref: '../examples/recordSpecification.yaml'
+        schema:
+          $ref: '../record-specifications-server.yaml#/components/schemas/recordSpecification'
+  responses:
+    '204':
+      description: 'Specification created'

@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "45af52bd-22de-4505-9192-31027a64309a",
+		"name": "temp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3711377"
+	},
+	"item": [
+		{
+			"name": "MVRM-2",
+			"item": [
+				{
+					"name": "record specifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"2349b0e5-605b-4afd-ab2b-2625c6da11ad\",\n    \"type\": \"MARC\",\n    \"fieldRules\": [\n        {\n            \"tag\": \"100\",\n            \"requiredSubfields\": [\n                \"a\",\n                \"b\"\n            ]\n        },\n        {\n            \"tag\": \"200\",\n            \"requiredSubfields\": [\n                \"c\",\n                \"d\"\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/record-specifications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"record-specifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "record specifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/record-specifications?recordType=MARC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"record-specifications"
+							],
+							"query": [
+								{
+									"key": "recordType",
+									"value": "MARC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"MARC\",\n    \"fields\": [\n        {\n            \"tag\": \"100\",\n            \"subfields\": [\n                \"c\",\n                \"d\"\n            ]\n        },\n        {\n            \"tag\": \"200\",\n            \"subfields\": [\n                \"a\",\n                \"b\"\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/record-specifications/validate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"record-specifications",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
